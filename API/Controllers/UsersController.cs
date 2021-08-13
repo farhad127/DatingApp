@@ -30,6 +30,7 @@ namespace API.Controllers
         {
             var users = await _userRepository.GetMembersAsync();
             return Ok(users);
+            
         }
 
         // api/users/3
@@ -38,6 +39,7 @@ namespace API.Controllers
         public async Task<ActionResult<MemberDto>> GetUser(string username)
         {
             return await _userRepository.GetMemberAsync(username);
+            
           
         }
     }
